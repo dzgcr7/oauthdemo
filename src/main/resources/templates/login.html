@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script>
+        var query_string = location.search
+        function login() {
+            var name = document.getElementById("name").value
+            var password = document.getElementById("password").value
+            query_string += "?name=" + name+"&password=" + password
+            location.href = "logins" + query_string
+        }
+    </script>
+</head>
+<body>
+<label>Name:
+    <input name="user_login_name" autocomplete="name" id="name">
+
+</label>
+<label>password:
+    <input name="user_login_password" autocomplete="password" id="password">
+
+</label>
+
+<button onclick="login()">Login</button>
+
+</body>
+</html>
